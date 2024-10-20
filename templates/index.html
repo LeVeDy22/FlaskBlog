@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>
+    {% block title %}
+    Welcome to BimbaSmall!
+    {% endblock %}
+</h1>
+
+{% for post in content %}
+<a href="#">
+    <h2>{{ post.title }}</h2>
+</a>
+{{ post.content }}
+<span class="badge badge-primary">
+    {{ post.created }}
+</span>
+<hr>
+
+{% endfor %}
+{% endblock %}
